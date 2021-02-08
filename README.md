@@ -2,7 +2,7 @@
 
 Download all the images in a 4chan thread. Creates directory in current working directory and numbers each file from 1.
 
-To get the thread link, open thread id in new tab, remove anything thread id, copy+paste into app(eg. https://boards.4chan.org/gif/thread/19008256#q19008256 >> https://boards.4chan.org/gif/thread/19008256)
+To get the thread link, right click thread id and open in new tab, remove anything after the thread id in url, copy+paste into app(eg. https://boards.4chan.org/gif/thread/19008256#q19008256 >> https://boards.4chan.org/gif/thread/19008256)
 
 ## setup
 
@@ -16,5 +16,5 @@ get thread link easily
 
 add character checking to eliminate special charcters in dir name
 
-add filename
+add file extention
 
