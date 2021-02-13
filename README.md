@@ -16,5 +16,3 @@ get thread link easily
 
 add character checking to eliminate special charcters in dir name
 
-add file extention
-
