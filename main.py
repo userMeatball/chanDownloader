@@ -37,9 +37,13 @@ else:
     
 
 #downloads every file in links list
+fileName = ""
 fNum = 1 
 for link in links:
-    print("Downloading file: ", str(fNum))
-    urllib.request.urlretrieve(link, './' + dirName + '/' + str(fNum))
+    fileName = link.split('/', 4)[4]    
+
+    print("Downloading file: ", str(fNum), "-", fileName)
+    urllib.request.urlretrieve(link, './' + dirName + '/' + str(fileName))
     fNum += 1
+    fileName = ''
 
