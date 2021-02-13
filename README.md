@@ -1,18 +1,18 @@
 # chanDownloader
 
-Download all the images in a 4chan thread. Creates directory in current working directory and numbers each file from 1.
+Download all the images in a 4chan thread. Creates directory in current working directory
 
-To get the thread link, right click thread id and open in new tab, remove anything after the thread id in url, copy+paste into app(eg. https://boards.4chan.org/gif/thread/19008256#q19008256 >> https://boards.4chan.org/gif/thread/19008256)
+## use
+
+right click on thread number, copy link location and paste into app 
+
+link example ("https://boards.4channel.org/g/thread/80174386#q80174386")
 
 ## setup
 
 Must have installed-
+
 Beautiful Soup 4
 
 lxml
-
-## changes needed
-get thread link easily
-
-add character checking to eliminate special charcters in dir name
 

@@ -4,7 +4,11 @@ from datetime import date
 import urllib.request
 from urllib.request import Request, urlopen
 
-userLink = input("Link the 4chan thread: ")
+#get link and clean
+inUserLink = input("Link the 4chan thread: ")
+userLink = inUserLink.split('#', 1)[0]
+print(userLink)
+
 
 req = Request(userLink, headers={'User-Agent': 'Mozilla/5.0'})  #bypass 403 error
 
@@ -24,9 +28,15 @@ links = [http + p for p in path]
 print("There are " + str(len(links)) + " files.")
 
 
-#mkdir with thread title + date filename
+#mkdir with thread title + date
+spChars = ['/', '\\', ':', '*', '?', "\"", '<', '>', '|'] #unallowed dir chars
+
 threadTitle = soup.find('blockquote', class_="postMessage")
 threadText = threadTitle.text
+
+for i in spChars:
+    threadText = threadText.replace(i, ' ') #replace special chars
+
 dirName = threadText + " " + str(date.today())
 
 if not os.path.isdir(dirName):
@@ -36,7 +46,7 @@ else:
     print("E: Directory already present: ", dirName)
     
 
-#downloads every file in links list
+#sets file name and downloads every file in links list
 fileName = ""
 fNum = 1 
 for link in links:
